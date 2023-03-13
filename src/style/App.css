@@ -1,0 +1,462 @@
+@import url(d:\IT\Vite\vite-project\src\style\reset.css);
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.header {
+  position: fixed;
+  width: 60%;
+  z-index: 100;
+  -webkit-transform: translate(0px, -100%);
+          transform: translate(0px, -100%);
+}
+
+.loaded .header, .loaded-about .header {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.menu {
+  background: #c850f2;
+  border-radius: 0rem 0rem .5rem .5rem;
+}
+
+.menu_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: calc(20px + (40 - 20) * ((100vw - 425px)/(1920 - 425))) calc(25px + (120 - 25) * ((100vw - 320px)/(1920 - 320)));
+}
+
+.menu_item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  will-change: transform;
+}
+
+.menu_item:hover {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.menu_link {
+  letter-spacing: 0.01em;
+  color: #000;
+  font-size: calc(12px + (20 - 12) * ((100vw - 320px)/(1920 - 320)));
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 80%;
+  }
+}
+
+@media (max-width: 426px) {
+  .header {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    overflow: hidden;
+  }
+  .mobile_menu {
+    height: 100%;
+    background-color: #c850f2;
+    -webkit-transform: translate(-100%, 0px);
+            transform: translate(-100%, 0px);
+    -webkit-transition: -webkit-transform 0.1s ease;
+    transition: -webkit-transform 0.1s ease;
+    transition: transform 0.1s ease;
+    transition: transform 0.1s ease, -webkit-transform 0.1s ease;
+  }
+  .mobile_list {
+    height: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 100px;
+  }
+  .mobile_item {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+  .mobile_link {
+    color: #000;
+    display: block;
+    width: 200px;
+  }
+  .mobile_popup {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: #000 center / auto no-repeat;
+    background-color: #fff;
+    border-radius: 50%;
+    top: -50px;
+    right: -50px;
+  }
+  .mobile_popup span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #c850f2;
+    position: relative;
+    top: 75px;
+    left: 50px;
+  }
+  .mobile_popup span::after {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #c850f2;
+    position: relative;
+    top: 5px;
+    left: 0;
+    content: '';
+  }
+  .mobile_popup span::before {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #c850f2;
+    position: relative;
+    top: 15px;
+    left: 0;
+    content: '';
+  }
+  .mobile_open .mobile_menu {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+  }
+  .mobile_open .mobile_popup {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    top: -50px;
+    right: -50px;
+  }
+  .mobile_open .mobile_popup span {
+    display: none;
+  }
+  .mobile_open .mobile_popup::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #c850f2;
+    position: absolute;
+    top: 85px;
+    left: 50px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .mobile_open .mobile_popup::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #c850f2;
+    position: absolute;
+    top: 85px;
+    left: 50px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+[class*='-tag'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.opening-tag span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/BG/opening-tag.png) center/auto 10% no-repeat;
+  margin-left: -40vw;
+  -webkit-transform: translate(-100%, 0rem);
+          transform: translate(-100%, 0rem);
+}
+
+.slash-tag span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/BG/slash-tag.svg) center/auto 12% no-repeat;
+  margin-left: 35vw;
+  -webkit-transform: translate(100%, 0rem);
+          transform: translate(100%, 0rem);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.closing-tag span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/BG/closing-tag.png) center/auto 10% no-repeat;
+  margin-left: 40vw;
+  -webkit-transform: translate(100%, 0rem);
+          transform: translate(100%, 0rem);
+}
+
+.bitmoji-tag span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-left: 20vw;
+  background: url(../assets/Bitmoji/sticker.webp) center/auto 35% no-repeat;
+  opacity: 0;
+}
+
+.main {
+  color: #c850f2;
+  will-change: transform;
+}
+
+.main_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  gap: 30px;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.main_title {
+  font-size: calc(18px + (45 - 18) * ((100vw - 320px)/(1920 - 320)));
+  opacity: 0;
+  font-weight: 700;
+}
+
+.main_description {
+  font-size: 14px;
+  max-width: calc(250px + (600 - 250) * ((100vw - 20rem)/(1920 - 320)));
+  opacity: 0;
+  color: #fff;
+  line-height: 1.875rem;
+  font-size: calc(15px + (25 - 15) * ((100vw - 320px)/(1920 - 320)));
+}
+
+.main_description span {
+  font-size: calc(16px + (30 - 16) * ((100vw - 20rem)/(1920 - 320)));
+  display: block;
+  font-weight: 700;
+}
+
+.main_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 12.5rem;
+  height: 3.125rem;
+  background-color: #fff;
+  border-radius: 1.25rem;
+  padding-left: 1.25rem;
+  line-height: 3.125rem;
+  font-weight: 700;
+  z-index: 100;
+  color: #c850f2;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.main_button span {
+  display: inline-block;
+  overflow: hidden;
+  width: 3.125rem;
+  height: 3.125rem;
+  background: url(../assets/services/arrow-right.svg) center/auto 60% no-repeat;
+  -webkit-transform: translate(-100%, 0px);
+          transform: translate(-100%, 0px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease, -webkit-transform 1s ease;
+  transition: opacity 0.5s ease, -webkit-transform 1s ease;
+  transition: transform 1s ease, opacity 0.5s ease;
+  transition: transform 1s ease, opacity 0.5s ease, -webkit-transform 1s ease;
+}
+
+.main_button:hover span {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+  opacity: 1;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: opacity 1s ease, -webkit-transform 1s ease;
+  transition: transform 1s ease, opacity 1s ease;
+  transition: transform 1s ease, opacity 1s ease, -webkit-transform 1s ease;
+}
+
+.loaded .opening-tag span {
+  -webkit-transform: translate(0rem, 0rem) rotate(720deg);
+          transform: translate(0rem, 0rem) rotate(720deg);
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.loaded .slash-tag span {
+  -webkit-transform: translate(0rem, 0rem) rotate(-720deg);
+          transform: translate(0rem, 0rem) rotate(-720deg);
+  -webkit-transition: -webkit-transform 1.25s ease;
+  transition: -webkit-transform 1.25s ease;
+  transition: transform 1.25s ease;
+  transition: transform 1.25s ease, -webkit-transform 1.25s ease;
+}
+
+.loaded .closing-tag span {
+  -webkit-transform: translate(0rem, 0rem) rotate(-720deg);
+          transform: translate(0rem, 0rem) rotate(-720deg);
+  -webkit-transition: -webkit-transform 1.5s ease;
+  transition: -webkit-transform 1.5s ease;
+  transition: transform 1.5s ease;
+  transition: transform 1.5s ease, -webkit-transform 1.5s ease;
+}
+
+.loaded .bitmoji-tag span {
+  opacity: 1;
+  -webkit-transition: opacity 3s ease;
+  transition: opacity 3s ease;
+}
+
+.loaded .main_title {
+  -webkit-transition: opacity 3s ease;
+  transition: opacity 3s ease;
+  opacity: 1;
+}
+
+.loaded .main_description {
+  -webkit-transition: opacity 3s ease;
+  transition: opacity 3s ease;
+  opacity: 1;
+}
+
+.loaded .main_button {
+  -webkit-transition: opacity 3s ease;
+  transition: opacity 3s ease;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .opening-tag span {
+    margin-left: calc(-120px + (-250 + 120) * ((100vw - 320px)/(768 - 320)));
+    margin-top: 180px;
+  }
+  .slash-tag span {
+    margin-left: calc(85px + (210 - 85) * ((100vw - 320px)/(768 - 320)));
+    margin-top: 180px;
+  }
+  .closing-tag span {
+    margin-left: calc(120px + (250 - 120) * ((100vw - 320px)/(768 - 320)));
+    margin-top: 180px;
+  }
+  .bitmoji-tag span {
+    margin-left: 0;
+    margin-top: 150px;
+  }
+  .main_content {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 120px;
+  }
+  .main_description {
+    text-align: center;
+  }
+}
+
+.about {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+
+.contact {
+  padding-top: 12.5rem;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+/*# sourceMappingURL=App.css.map */

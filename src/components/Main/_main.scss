@@ -1,0 +1,212 @@
+.main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+[class*='-tag'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.opening-tag {
+
+    span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(../assets/BG/opening-tag.png) center/ auto 10% no-repeat;
+        margin-left: -40vw;
+        transform: translate(-100%,0rem);
+    }
+}
+
+.slash-tag {
+
+    span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(../assets/BG/slash-tag.svg) center/ auto 12% no-repeat;
+        margin-left: 35vw;
+        transform: translate(100%,0rem);
+        transition: transform 1s ease;
+    }
+}
+
+.closing-tag  {
+
+    span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(../assets/BG/closing-tag.png) center/ auto 10% no-repeat;
+        margin-left: 40vw;
+        transform: translate(100%,0rem);
+    }
+}
+
+.bitmoji-tag {
+    span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-left: 20vw;
+        background: url(../assets/Bitmoji/sticker.webp) center/ auto 35% no-repeat;
+        opacity: 0;
+    }
+}
+
+.main {
+
+    color: #c850f2;
+    will-change: transform;
+
+    &_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        gap: 30px;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    &_title {
+        font-size: calc(18px + (45 - 18) * ((100vw - 320px)/(1920 - 320)));
+        opacity: 0;
+        font-weight: 700;
+    }
+
+    &_description {
+        font-size: 14px;
+        max-width: calc(250px + (600 - 250) * ((100vw - 20rem)/(1920 - 320)));
+        opacity: 0;
+        color: #fff;
+        line-height: 1.875rem;
+        font-size: calc(15px + (25 - 15) * ((100vw - 320px)/(1920 - 320)));
+
+        span {
+            font-size: calc(16px + (30 - 16) * ((100vw - 20rem)/(1920 - 320)));
+            display: block;
+            font-weight: 700;
+        }
+    }
+
+    &_button {
+        display: flex;
+        justify-content: space-between;
+        width: 12.5rem;
+        height: 3.125rem;
+        background-color: #fff;
+        border-radius: 1.25rem;
+        padding-left: 1.25rem;
+        line-height: 3.125rem;
+        font-weight: 700;
+        z-index: 100;
+        color: #c850f2;
+        opacity: 0;
+        overflow: hidden;
+
+        span {
+            display: inline-block;
+            overflow: hidden;
+            width: 3.125rem;
+            height: 3.125rem;
+            background: url(../assets/services/arrow-right.svg) center / auto 60% no-repeat;
+            transform: translate(-100%, 0px);
+            opacity: 0;
+            transition: transform 1s ease, opacity 0.5s ease;
+        }
+
+        &:hover span{
+            transform: translate(0px, 0px);
+            opacity: 1;
+            transition: transform 1s ease, opacity 1s ease;
+        }
+    }
+
+}
+
+.loaded {
+    .opening-tag span{
+        transform: translate(0rem,0rem) rotate(720deg);
+        transition: transform 1s ease;
+    }
+
+    .slash-tag span {
+        transform: translate(0rem,0rem) rotate(-720deg);
+        transition: transform 1.25s ease;
+    }
+
+    .closing-tag span{
+        transform: translate(0rem,0rem) rotate(-720deg);
+        transition: transform 1.5s ease;
+    }
+
+    .bitmoji-tag span{
+        opacity: 1;
+        transition: opacity 3s ease;
+    }
+
+    .main {
+
+        &_title {
+            transition: opacity 3s ease;
+            opacity: 1;
+        }
+
+        &_description {
+            transition: opacity 3s ease;
+            opacity: 1;
+        }
+
+        &_button {
+            transition: opacity 3s ease;
+            opacity: 1;
+        }
+    }
+}
+
+
+@media(max-width:768px) {
+    .opening-tag span{
+        margin-left: calc(-120px + (-250 + 120) * ((100vw - 320px)/(768 - 320)));
+        margin-top: 180px;
+    }
+
+    .slash-tag span {
+        margin-left: calc(85px + (210 - 85) * ((100vw - 320px)/(768 - 320)));
+        margin-top: 180px;
+    }
+
+    .closing-tag span{
+        margin-left: calc(120px + (250 - 120) * ((100vw - 320px)/(768 - 320)));
+        margin-top: 180px;
+    }
+
+    .bitmoji-tag span{
+        margin-left: 0;
+        margin-top: 150px;
+    }
+
+    .main {
+        &_content {
+            justify-content: start;
+            align-items: center;
+            padding-top: 120px;
+        }
+
+        &_description {
+            text-align: center;
+        }
+    }
+}
