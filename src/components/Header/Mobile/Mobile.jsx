@@ -4,14 +4,17 @@ import { Link } from "react-router-dom";
 
 const Mobile = () => {
 
-    const [className, setClassName] = useState('mobile');
+    const [className, setClassName] = useState('mobile'),
+          [burger, setBurger] = useState('open');
 
     const showMobileMenu = () => {
-        setClassName('mobile mobile_open')
+        setClassName('mobile mobile_open');
+        setBurger('close');
     }
 
     const hideMobileMenu = () => {
-        setClassName('mobile')
+        setClassName('mobile');
+        setBurger('open')
     }
 
     const toggleMobileMenu = () => {
@@ -23,6 +26,7 @@ const Mobile = () => {
     }
 
     return(
+        <>
         <section className={className}>
             <nav className='mobile_menu'>
                 <ul className="mobile_list">
@@ -32,8 +36,9 @@ const Mobile = () => {
                     <li className="mobile_item"><a href="#" className="mobile_link">Contact me <span></span></a></li>
                 </ul>
             </nav>
-            <div onClick={toggleMobileMenu} className="mobile_popup"><span></span></div>
         </section>
+        <div onClick={toggleMobileMenu} className={`mobile_popup ${burger}`}><span></span></div>
+        </>
     )
 }
 

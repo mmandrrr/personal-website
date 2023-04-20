@@ -18,7 +18,7 @@ function App() {
   }
 
   useEffect(() => {
-    setClassName('app loaded')
+    changeLoaded('app loaded')
   },[])
 
   return (

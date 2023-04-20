@@ -1,6 +1,51 @@
 .contact {
     padding-top: 12.5rem;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #000;
+
+    &_form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: center;
+
+        label {
+            width: 100%;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .3125rem;
+        }
+
+        input:not(:last-child) {
+            width: 25%;
+            height: 1.875rem;
+            border-radius: .625rem;
+            padding: .625rem;
+            font-weight: bold;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        textarea {
+            width: 25%;
+            border-radius: .625rem;
+            padding: .625rem;
+            font-weight: bold;
+            resize: none;
+        }
+    }
+    &_btn {
+        background-color: $purple;
+        padding: .625rem 1.875rem;
+        border-radius: .625rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }

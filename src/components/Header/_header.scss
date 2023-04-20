@@ -14,7 +14,7 @@
 
 .menu {
 
-    background: #c850f2;
+    background: $purple;
     border-radius: 0rem 0rem .5rem .5rem;
 
     &_list {
@@ -65,12 +65,13 @@
         height: 100%;
         z-index: 100;
         overflow: hidden;
+        visibility: hidden;
     
         &_menu {
             height: 100%;
-            background-color: #c850f2;
+            background-color: $purple;
             transform: translate(-100%,0px);
-            transition: transform 0.1s ease;
+            transition: all 0.1s ease;
         }
     
         &_list {
@@ -99,6 +100,7 @@
         }
     
         &_popup {
+            z-index: 100;
             width: 150px;
             height: 150px;
             position: absolute;
@@ -112,7 +114,7 @@
                 display: block;
                 width: 25px;
                 height: 2px;
-                background-color: #c850f2;
+                background-color: $purple;
                 position: relative;
                 top: 75px;
                 left: 50px;
@@ -121,73 +123,75 @@
                     display: block;
                     width: 25px;
                     height: 2px;
-                    background-color: #c850f2;
+                    background-color: $purple;
                     position: relative;
                     top: 5px;
                     left: 0;
                     content: '';
+                    transition: rotate 1s ease;
                 }
 
                 &::before {
                     display: block;
                     width: 25px;
                     height: 2px;
-                    background-color: #c850f2;
+                    background-color: $purple;
                     position: relative;
                     top: 15px;
                     left: 0;
                     content: '';
+                    transition: rotate 1s ease;
                 }
             }
         }
     }
     
     .mobile_open {
-        
-    
+        visibility: visible;
+
         .mobile {
             &_menu {
                 transform: translate(0px,0px);
                 transition: transform 1s ease;
             }
-
-            &_popup {
-                width: 150px;
-                height: 150px;
-                position: absolute;
-                background-color: #fff;
-                border-radius: 50%;
-                top: -50px;
-                right: -50px;
-
-                span {
-                    display: none;
-                }
-        
-                &::before {
-                    content: '';
-                    display: block;
-                    width: 25px;
-                    height: 3px;
-                    background-color: #c850f2;
-                    position: absolute;
-                    top: 85px;
-                    left: 50px;
-                    transform: rotate(45deg);
-                }
-        
-                &::after {
-                    content: '';
-                    display: block;
-                    width: 25px;
-                    height: 3px;
-                    background-color: #c850f2;
-                    position: absolute;
-                    top: 85px;
-                    left: 50px;
-                    transform: rotate(-45deg);
-                }
-            }
         }
     }
+}
+
+.mobile_popup.close {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        top: -50px;
+        right: -50px;
+
+        span {
+            display: none;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: $purple;
+            position: absolute;
+            top: 85px;
+            left: 50px;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: $purple;
+            position: absolute;
+            top: 85px;
+            left: 50px;
+            transform: rotate(-45deg);
+        }
 }

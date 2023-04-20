@@ -67,7 +67,7 @@
 
 .main {
 
-    color: #c850f2;
+    color: $purple;
     will-change: transform;
 
     &_content {
@@ -112,7 +112,7 @@
         line-height: 3.125rem;
         font-weight: 700;
         z-index: 100;
-        color: #c850f2;
+        color: $purple;
         opacity: 0;
         overflow: hidden;
 
