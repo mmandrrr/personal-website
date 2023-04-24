@@ -15,6 +15,7 @@
     height: 100%;
     overflow: hidden;
     will-change: transform;
+    z-index: -10;
 }
 
 .opening-tag {

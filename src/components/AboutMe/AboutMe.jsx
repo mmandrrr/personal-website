@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import intro from '../../assets/Bitmoji/greeting.webp'
+import Introduction from "./Introduction/Introduction";
+import Experience from "./Experience/Experience";
 
 const AboutMe = ({changeLoaded}) => {
 
@@ -11,21 +12,8 @@ const AboutMe = ({changeLoaded}) => {
     return(
         <section className="about">
             <div className="container">
-                <div className="intro">
-                    <img src={intro} alt="greeting" className="intro__img" />
-                    <div className="intro__content">
-                        <h3 className="intro__subtitle subtitle">
-                            About Me
-                        </h3>
-                        <h2 className="intro__title title">
-                            My name is Maxim
-                        </h2>
-                        <span className="intro__divider divider"></span>
-                        <p className="intro__description text_fz14">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum error excepturi minus fugit doloremque est soluta vero porro optio laborum, consequuntur, laboriosam saepe. A, eligendi!
-                        </p>
-                    </div>
-                </div>
+                <Introduction />
+                <Experience />
             </div>
         </section>
     )

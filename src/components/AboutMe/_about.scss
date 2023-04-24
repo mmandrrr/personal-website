@@ -1,6 +1,5 @@
 .about {
     background-color: #000;
-    width: 100vw;
     overflow-x: hidden;
 }
 
@@ -11,6 +10,8 @@
     display: flex;
     flex-direction: column;
 }
+
+// Introduction Block
 
 .intro {
     padding-top: calc(9.375rem + (220 - 150) * ((100vw - 20rem)/(1920 - 320)));
@@ -49,6 +50,22 @@
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5rem;
+    position: relative;
+    padding-left: 10px;
+    z-index: 1;
+
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 1.875rem;
+        height: 1.875rem;
+        border-radius: 50%;
+        background-color: #fff;
+        z-index: -1;
+        left: 0;
+        top: -0.25rem;
+    }
 }
 .title {
     font-weight: 700;
@@ -59,6 +76,18 @@
 
     &_fz14 {
         font-weight: 500;
+        font-size: .875rem;
+        line-height: 1.3125rem;
+    }
+
+    &_fz12 {
+        font-weight: 500;
+        font-size: .75rem;
+        line-height: 1.125rem;
+    }
+
+    &_bold-fz14 {
+        font-weight: 700;
         font-size: .875rem;
         line-height: 1.3125rem;
     }
@@ -97,5 +126,68 @@
         &__content {
             max-width: 100%;
         }
+    }
+}
+
+// Experience Block
+
+.exp {
+    color: $purple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        margin-bottom: 1.5625rem;
+    }
+
+    &__divider {
+        margin-bottom: 3.75rem;
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__block {
+        max-width: 26.5625rem;
+
+        h4 {
+            margin-bottom: 2.8125rem;
+        }
+    }
+
+    &__item {
+        max-width: 23.4375rem;
+    }
+
+    &__item-header {
+        display: flex;
+        gap: 1.125rem;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 1.875rem;
+            height: 1.875rem;
+            border-radius: 50%;
+            background-color: #fff;
+            z-index: -1;
+        }
+
+        img {
+            padding-left: .625rem;
+        }
+    }
+
+    &__item-title {
+    }
+
+    &__item-content {
     }
 }
