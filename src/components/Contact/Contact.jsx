@@ -1,6 +1,14 @@
+import { useEffect } from "react"
 
 
-const Contact = () => {
+
+
+const Contact = ({changeLoaded}) => {
+
+    useEffect(() => {
+        changeLoaded('app loaded-contact')
+    },[])
+
     return(
         <section className="contact">
             <div className="contact_container">

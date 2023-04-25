@@ -5,7 +5,7 @@
 
 .container {
     max-width: 73.125rem;
-    padding: 0 15px;
+    padding: 0 .9375rem;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@
     font-size: 1rem;
     line-height: 1.5rem;
     position: relative;
-    padding-left: 10px;
+    padding-left: .625rem;
     z-index: 1;
 
     &::before {
@@ -99,12 +99,6 @@
     border: .1875rem solid #fff;
 }
 
-.loaded-about {
-    .intro {
-        opacity: 1;
-    }
-}
-
 @media(max-width:868px) {
     .intro {
         &__content {
@@ -136,6 +130,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 7.5rem;
+    transition: opacity 1.5s ease;
+    opacity: 0;
 
     &__title {
         margin-bottom: 1.5625rem;
@@ -146,21 +143,62 @@
     }
 
     &__content {
+        padding: 0 4.0625rem;
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
     &__block {
         max-width: 26.5625rem;
+        padding-left: 3.125rem;
 
         h4 {
-            margin-bottom: 2.8125rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: .9375rem;
+                height: .9375rem;
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+                left: -3.125rem;
+                border-radius: 50%;
+            }
+        }
+
+        ul {
+            position: relative;
+            &::before {
+                content: '';
+                height: 100%;
+                width: .125rem; 
+                position: absolute;
+                left: -2.7188rem;
+                background-color: $purple;
+            }
+
+            li {
+                padding-top: 2.8125rem;
+            }
         }
     }
 
     &__item {
         max-width: 23.4375rem;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 2.6875rem;
+            height: .125rem;
+            background-color: $purple;
+            position: absolute;
+            left: -2.6875rem;
+            top: .8125rem;
+        }
     }
 
     &__item-header {
@@ -182,12 +220,27 @@
 
         img {
             padding-left: .625rem;
+            max-width: 2.1875rem;
         }
     }
 
     &__item-title {
+       margin-bottom: .75rem; 
+    }
+}
+
+@media(max-width: 768px) {
+    .exp__item {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.loaded-about {
+    .intro {
+        opacity: 1;
     }
 
-    &__item-content {
+    .exp {
+        opacity: 1;
     }
 }

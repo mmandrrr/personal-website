@@ -18,7 +18,10 @@ function App() {
   }
 
   useEffect(() => {
-    changeLoaded('app loaded')
+    const path = window.location.href.split('/');
+    if(!path[path.length - 1]) {
+      changeLoaded('app loaded');
+    }
   },[])
 
   return (
@@ -34,7 +37,9 @@ function App() {
                 <Route path='/about' element={<AboutMe 
                     changeLoaded={changeLoaded}
                 />} />
-                <Route path='/contact' element={<Contact/>} />
+                <Route path='/contact' element={<Contact
+                    changeLoaded={changeLoaded}
+                />} />
             </Routes>
         </div>
     </Router>
