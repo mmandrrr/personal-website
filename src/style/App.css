@@ -712,11 +712,45 @@ body {
   max-width: 2.1875rem;
 }
 
+.exp__item-header #marketing {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.exp__item-header #university {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.exp__item-header #courses {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.exp__item-header #letter {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
 .exp__item-title {
   margin-bottom: .75rem;
 }
 
+@media (max-width: 1024px) {
+  .exp__block ul li {
+    max-width: calc(15.625rem + (350 - 250) * ((100vw - 48rem)/(1024 - 768)));
+  }
+}
+
 @media (max-width: 768px) {
+  .exp__content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .exp__block ul li {
+    max-width: 100%;
+  }
   .exp__item {
     margin-bottom: 2.5rem;
   }
@@ -728,6 +762,158 @@ body {
 
 .loaded-about .exp {
   opacity: 1;
+}
+
+@media (max-width: 515px) {
+  .exp #marketing {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #university {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  .exp #courses {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  .exp #letter {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@media (max-width: 504px) {
+  .exp #marketing {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #university {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #courses {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  .exp #letter {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@media (max-width: 445px) {
+  .exp #marketing {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #university {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #courses {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #letter {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@media (max-width: 443px) {
+  .exp #marketing {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #university {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #courses {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #letter {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+
+@media (max-width: 421px) {
+  .exp #marketing {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  .exp #university {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #courses {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #letter {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+
+@media (max-width: 389px) {
+  .exp #marketing {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  .exp #university {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  .exp #courses {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  .exp #letter {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+
+@media (max-width: 371px) {
+  .exp #marketing {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  .exp #university {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  .exp #courses {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  .exp #letter {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+
+@media (max-width: 357px) {
+  .exp #marketing {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  .exp #university {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  .exp #courses {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  .exp #letter {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
 }
 
 .contact {

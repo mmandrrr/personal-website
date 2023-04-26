@@ -222,6 +222,22 @@
             padding-left: .625rem;
             max-width: 2.1875rem;
         }
+
+        #marketing {
+            transform: translateY(0%);
+        }
+
+        #university {
+            transform: translateY(0%);
+        }
+
+        #courses {
+            transform: translateY(0%);
+        }
+
+        #letter {
+            transform: translateY(0%);
+        }
     }
 
     &__item-title {
@@ -229,9 +245,28 @@
     }
 }
 
+@media(max-width: 1024px) {
+    .exp {
+        &__block ul li {
+            max-width: calc(15.625rem + (350 - 250) * ((100vw - 48rem)/(1024 - 768)));
+        }
+    }
+}
+
 @media(max-width: 768px) {
-    .exp__item {
-        margin-bottom: 2.5rem;
+    .exp {
+
+        &__content {
+            justify-content: center;
+        }
+
+        &__block ul li {
+            max-width: 100%;
+        }
+
+        &__item {
+            margin-bottom: 2.5rem;
+        }
     }
 }
 
@@ -244,3 +279,5 @@
         opacity: 1;
     }
 }
+
+@import './iconsAdaptive';

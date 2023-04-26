@@ -3,12 +3,14 @@ import courses from '../../../../assets/experience/courses-icon.svg';
 
 export const edData = [
     {
+        id : 'courses',
         icon : courses,
         title : 'Udemy',
         subtitle : 'Web-Development (2021-♾️)',
         description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas suscipit molestiae repellat possimus fuga minus architecto tempora, vitae excepturi id.'
     },
     {
+        id : 'university',
         icon : university,
         title : 'IFNTUOG',
         subtitle : 'Geology of Oil and Gas (2015-2020)',

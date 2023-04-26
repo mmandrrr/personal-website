@@ -4,12 +4,12 @@ import { edData } from "./educationData"
 const Education = () => {
 
     
-    const edList = edData.map(({icon, title, subtitle, description},i) => {
+    const edList = edData.map(({id,icon, title, subtitle, description},i) => {
         return(
             <li key={i}>
                 <div className="exp__item">
                     <div className="exp__item-header">
-                        <img src={icon} alt={title} />
+                        <img src={icon} alt={title} id={id}/>
                         <div className="exp__item-title">
                             <div className="text_bold-fz14">{title}</div>
                             <div className="text_fz12">{subtitle}</div>
