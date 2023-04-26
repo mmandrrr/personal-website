@@ -31,6 +31,7 @@
         &:hover {
             transition: all 0.3s ease;
             transform: scale(1.2);
+            cursor: url(../assets/cursor/pointer.svg), auto;
         }
     }
 
@@ -38,6 +39,10 @@
         letter-spacing: 0.01em;
         color: #000;
         font-size: calc(12px + (20 - 12) * ((100vw - 320px)/(1920 - 320)));
+        
+        &:hover {
+            cursor: url(../assets/cursor/pointer.svg), auto;
+        }
     }
 }
 
@@ -92,6 +97,7 @@
             font-size: 20px;
             border: 1px solid black;
             border-radius: 20px;
+
         }
     
         &_link {

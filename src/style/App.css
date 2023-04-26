@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body {
+  cursor: url(../assets/cursor/cursor.svg), auto;
+}
+
 .app {
   position: relative;
   overflow-x: hidden;
@@ -55,12 +59,17 @@
   transition: all 0.3s ease;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+  cursor: url(../assets/cursor/pointer.svg), auto;
 }
 
 .menu_link {
   letter-spacing: 0.01em;
   color: #000;
   font-size: calc(12px + (20 - 12) * ((100vw - 320px)/(1920 - 320)));
+}
+
+.menu_link:hover {
+  cursor: url(../assets/cursor/pointer.svg), auto;
 }
 
 .mobile {
@@ -347,6 +356,7 @@
   color: #c850f2;
   opacity: 0;
   overflow: hidden;
+  cursor: url(../assets/cursor/pointer.svg), auto;
 }
 
 .main_button span {
@@ -755,6 +765,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: .3125rem;
+  cursor: url(../assets/cursor/cursor.svg), auto;
 }
 
 .contact_form input:not(:last-child) {
@@ -781,9 +792,6 @@
   background-color: #c850f2;
   padding: .625rem 1.875rem;
   border-radius: .625rem;
-}
-
-.contact_btn:hover {
-  cursor: pointer;
+  cursor: url(../assets/cursor/pointer.svg), auto;
 }
 /*# sourceMappingURL=App.css.map */

@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    cursor: url(../assets/cursor/cursor.svg), auto;
+}
+
 .app {
     position: relative;
     overflow-x: hidden;
