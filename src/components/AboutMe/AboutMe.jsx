@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Introduction from "./Introduction/Introduction";
 import Experience from "./Experience/Experience";
+import Skills from "./Skills/Skills";
 
 const AboutMe = ({changeLoaded}) => {
 
@@ -14,6 +15,7 @@ const AboutMe = ({changeLoaded}) => {
             <div className="container">
                 <Introduction />
                 <Experience />
+                <Skills />
             </div>
         </section>
     )

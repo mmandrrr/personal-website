@@ -8,6 +8,7 @@ import Main from './components/Main/Main';
 import Mobile from './components/Header/Mobile/Mobile';
 import AboutMe from './components/AboutMe/AboutMe';
 import Contact from './components/Contact/Contact';
+import Projects from './components/Projects/Projects'
 
 function App() {
 
@@ -40,6 +41,9 @@ function App() {
                 <Route path='/contact' element={<Contact
                     changeLoaded={changeLoaded}
                 />} />
+                <Route path='/projects' element={<Projects 
+                  changeLoaded={changeLoaded}
+                />}/>
             </Routes>
         </div>
     </Router>

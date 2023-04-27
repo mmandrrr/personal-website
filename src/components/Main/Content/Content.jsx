@@ -8,7 +8,7 @@ const Content = () => {
                 <span>Welcome to my web-site!</span>
                 I am Junior Front-End Developer with a passion for code. 
             </p>
-            <Link to='/about' className="main_button">Let's Go! <span></span></Link>
+            <Link to='/about' className="main_button">Find out! <span></span></Link>
             
             <div className="bitmoji-tag"><span></span></div>
         </section>

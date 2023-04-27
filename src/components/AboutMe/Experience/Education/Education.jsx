@@ -15,7 +15,7 @@ const Education = () => {
                             <div className="text_fz12">{subtitle}</div>
                         </div>
                     </div>
-                    <div className="exp__item-content text_fz12">{description}</div>
+                    <div className="exp__item-content text_fz12 white">{description}</div>
                 </div>
             </li>
         )

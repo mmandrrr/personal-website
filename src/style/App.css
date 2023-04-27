@@ -558,6 +558,7 @@ body {
   font-weight: 500;
   font-size: .875rem;
   line-height: 1.3125rem;
+  color: #fff;
 }
 
 .text_fz12 {
@@ -570,6 +571,10 @@ body {
   font-weight: 700;
   font-size: .875rem;
   line-height: 1.3125rem;
+}
+
+.white {
+  color: #fff;
 }
 
 .divider {
@@ -608,7 +613,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 7.5rem;
   -webkit-transition: opacity 1.5s ease;
   transition: opacity 1.5s ease;
   opacity: 0;
@@ -633,6 +637,13 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: opacity 1.5s ease, -webkit-transform 1s ease;
+  transition: opacity 1.5s ease, -webkit-transform 1s ease;
+  transition: opacity 1.5s ease, transform 1s ease;
+  transition: opacity 1.5s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 
 .exp__block {
@@ -754,6 +765,12 @@ body {
   .exp__item {
     margin-bottom: 2.5rem;
   }
+}
+
+.exp.element-show .exp__content {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .loaded-about .intro {
@@ -916,6 +933,93 @@ body {
   }
 }
 
+.skills {
+  padding-top: 7.5rem;
+  color: #c850f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 7.5rem;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: opacity 1.5s ease, -webkit-transform 1s ease;
+  transition: opacity 1.5s ease, -webkit-transform 1s ease;
+  transition: opacity 1.5s ease, transform 1s ease;
+  transition: opacity 1.5s ease, transform 1s ease, -webkit-transform 1s ease;
+}
+
+.skills__subtitle {
+  margin-bottom: .375rem;
+}
+
+.skills__title {
+  margin-bottom: 1.5625rem;
+}
+
+.skills__divider {
+  margin-bottom: 3.75rem;
+}
+
+.skills__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: .8125rem;
+}
+
+.skills__item {
+  border: 1px solid #fff;
+  padding: 1.875rem 1.875rem 1.5625rem;
+}
+
+.skills__item-icon {
+  margin-bottom: 1.25rem;
+}
+
+.skills__item-name {
+  margin-bottom: .9375rem;
+}
+
+.skills__item-description {
+  color: #fff;
+}
+
+.skills.element-show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .skills__wrapper {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 570px) {
+  .skills__wrapper {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .skills__wrapper {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .contact {
   padding-top: 12.5rem;
   width: 100vw;
@@ -979,5 +1083,43 @@ body {
   padding: .625rem 1.875rem;
   border-radius: .625rem;
   cursor: url(../assets/cursor/pointer.svg), auto;
+}
+
+.projects {
+  padding-top: 9.375rem;
+  background-color: #000;
+  color: #c850f2;
+}
+
+.projects__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+.projects__subtitle {
+  margin-bottom: .375rem;
+}
+
+.projects__title {
+  margin-bottom: 1.5625rem;
+}
+
+.projects__divider {
+  margin-bottom: 3.75rem;
+}
+
+.loaded-projects .projects__container {
+  opacity: 1;
 }
 /*# sourceMappingURL=App.css.map */
