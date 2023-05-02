@@ -20,5 +20,9 @@ body {
 @import '../components/Header/_header.scss';
 @import '../components/Main/_main.scss';
 @import '../components/AboutMe/_about.scss';
-@import '../components/Contact/_contact.scss';
 @import '../components/Projects/projects';
+@import '../components/Contact/_contact.scss';
+
+a:hover {
+    cursor: url(../assets/cursor/pointer.svg), auto;
+}

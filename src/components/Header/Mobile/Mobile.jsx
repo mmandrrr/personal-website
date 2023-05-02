@@ -32,8 +32,8 @@ const Mobile = () => {
                 <ul className="mobile_list">
                     <li className="mobile_item"><Link onClick={hideMobileMenu} to="/" className="mobile_link">Home <span></span></Link></li>
                     <li className="mobile_item"><Link onClick={hideMobileMenu} to="about" className="mobile_link">About me <span></span></Link></li>
-                    <li className="mobile_item"><a href="#" className="mobile_link">Projects <span></span></a></li>
-                    <li className="mobile_item"><a href="#" className="mobile_link">Contact me <span></span></a></li>
+                    <li className="mobile_item"><Link onClick={hideMobileMenu} to="projects" className="mobile_link">Projects <span></span></Link></li>
+                    <li className="mobile_item"><Link onClick={hideMobileMenu} to="contact" className="mobile_link">Contact me <span></span></Link></li>
                 </ul>
             </nav>
         </section>

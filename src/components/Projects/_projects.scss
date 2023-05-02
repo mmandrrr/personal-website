@@ -31,7 +31,6 @@
         #todo-list {
             
             img {
-                width: 100%;
                 height: 100%;
             }
         }
@@ -69,7 +68,6 @@
 
         img {
             transition: transform 1s ease;
-            min-width: 100%;
         }
 
         &:hover {
@@ -127,6 +125,71 @@
 
     &__divider {
         margin-bottom: 3.75rem;
+    }
+}
+
+@media(max-width:1024px) {
+    .projects__wrapper {
+        #job-board {
+            img {
+                width: auto;
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .projects__wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 17.5rem);
+
+        #vetclinic {
+            grid-column: 1/4;
+            grid-row-start: 3;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media(max-width:625px){
+    .projects__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 17.5rem);
+
+        #portfolio {
+            grid-row: 2/3;
+            grid-column: 2/3;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        #job-board {
+            grid-row: 4/5;
+            grid-column: 1/4;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width:425px) {
+    .projects__wrapper {
+        #marvel-api {
+            grid-row: 1/2;
+        }
+
+        #portfolio {
+            grid-column: 1/3;
+        }
     }
 }
 
