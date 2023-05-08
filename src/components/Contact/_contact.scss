@@ -252,6 +252,7 @@ form.loading {
     background-color: rgba($color: #d9a7ec, $alpha: 0.8);
     border-radius: .625rem;
 }
+
 .message {
     font-weight: bold;
     color: wheat;
@@ -260,6 +261,25 @@ form.loading {
 
 form.sent {
     .success {
+        display: flex;
+    }
+}
+
+.error {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #d9a7ec, $alpha: 0.8);
+    border-radius: .625rem;
+}
+
+form.errorm {
+    .error {
         display: flex;
     }
 }

@@ -1,7 +1,8 @@
 
 import { formSubmit } from "../../../services/formSubmit"
-import Loader from "./Loader"
-import Success from "./Success"
+import Loader from "./Status/Loader"
+import Success from "./Status/Success"
+import ErrorMessage from "./Status/ErrorMessage"
 
 const Form = () => {
 
@@ -23,6 +24,7 @@ const Form = () => {
             <input type="submit" value="Send Letter" className="contact_btn"/>
             <Loader />
             <Success />
+            <ErrorMessage />
         </form>
     )
 }

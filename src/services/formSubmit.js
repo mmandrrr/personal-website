@@ -10,6 +10,15 @@ const classChanger = (target) => {
     },5000)
 }
 
+const throwError = (target) => {
+    target.classList.remove('loading');
+    target.classList.add('errorm');
+
+    setTimeout(() => {
+        target.classList.remove('errorm');
+    },5000)
+}
+
 export const formSubmit = (e) => {
     e.preventDefault();
 
@@ -37,7 +46,9 @@ export const formSubmit = (e) => {
             resetForm(document.getElementById('name'), document.getElementById('email'), document.getElementById('text'));
             classChanger(e.target);
         })
-        .catch(e => {
-            console.log(e);
+        .catch(error => {
+            console.log(error);
+            throwError(e.target);
+            resetForm(document.getElementById('name'), document.getElementById('email'), document.getElementById('text'));
         })
 }
