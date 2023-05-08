@@ -42,6 +42,7 @@
         transform: translateX(-100%);
         opacity: 0;
         transition: transform 1s ease, opacity 1s ease;
+        padding-top: 1.25rem;
 
         h3 {
             margin-bottom: 2.8125rem;
@@ -78,10 +79,12 @@
     }
 
     &__form {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 1.25rem;
         align-items: center;
+        padding: 1.25rem;
         transform: translateX(100%);
         opacity: 0;
         transition: transform 1s ease, opacity 1s ease;
@@ -152,5 +155,111 @@
             transform: translateX(0);
             opacity: 1;
         }
+    }
+}
+
+.loader {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #d9a7ec, $alpha: 0.8);
+    border-radius: .625rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wave {
+    width: .3125rem;
+    height: 3.125rem;
+    background: linear-gradient(45deg, cyan, #fff);
+    margin: 10px;
+    animation: wave 1s linear infinite;
+    border-radius: 1.25rem;
+}
+
+.wave:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.wave:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.wave:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.wave:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.wave:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+.wave:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.wave:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+.wave:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+.wave:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+form.loading {
+    .loader {
+        display: flex;
+    }
+}
+
+.success {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #d9a7ec, $alpha: 0.8);
+    border-radius: .625rem;
+}
+.message {
+    font-weight: bold;
+    color: wheat;
+    text-shadow: .125rem .125rem .3125rem black;
+}
+
+form.sent {
+    .success {
+        display: flex;
     }
 }

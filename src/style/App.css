@@ -1335,6 +1335,7 @@ body {
   transition: opacity 1s ease, -webkit-transform 1s ease;
   transition: transform 1s ease, opacity 1s ease;
   transition: transform 1s ease, opacity 1s ease, -webkit-transform 1s ease;
+  padding-top: 1.25rem;
 }
 
 .contact__social h3 {
@@ -1383,6 +1384,7 @@ body {
 }
 
 .contact__form {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1394,6 +1396,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1.25rem;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   opacity: 0;
@@ -1472,6 +1475,155 @@ body {
   -webkit-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
+}
+
+.loader {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(217, 167, 236, 0.8);
+  border-radius: .625rem;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wave {
+  width: .3125rem;
+  height: 3.125rem;
+  background: linear-gradient(45deg, cyan, #fff);
+  margin: 10px;
+  -webkit-animation: wave 1s linear infinite;
+          animation: wave 1s linear infinite;
+  border-radius: 1.25rem;
+}
+
+.wave:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.wave:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.wave:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.wave:nth-child(5) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.wave:nth-child(6) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.wave:nth-child(7) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.wave:nth-child(8) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.wave:nth-child(9) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.wave:nth-child(10) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+form.loading .loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.success {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(217, 167, 236, 0.8);
+  border-radius: .625rem;
+}
+
+.message {
+  font-weight: bold;
+  color: wheat;
+  text-shadow: .125rem .125rem .3125rem black;
+}
+
+form.sent .success {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 ::-webkit-scrollbar {

@@ -1,5 +1,7 @@
 
 import { formSubmit } from "../../../services/formSubmit"
+import Loader from "./Loader"
+import Success from "./Success"
 
 const Form = () => {
 
@@ -19,6 +21,8 @@ const Form = () => {
                 <textarea id="text" name="text" cols="30" rows="10"></textarea>
             </label>
             <input type="submit" value="Send Letter" className="contact_btn"/>
+            <Loader />
+            <Success />
         </form>
     )
 }
