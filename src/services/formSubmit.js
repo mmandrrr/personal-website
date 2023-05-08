@@ -1,26 +1,33 @@
+import emailjs from '@emailjs/browser';
+import { resetForm } from './resetForm';
+
 export const formSubmit = (e) => {
     e.preventDefault();
 
-    const postData = async (url, data) => {
-        let res = await fetch(url, {
-            method: "POST",
-            body: data
-        });
-    
-        return await res.text();
-    };
-
     const formData = new FormData(e.target);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const text = formData.get('text');
+    
+    let name = formData.get('name');
+    let email = formData.get('email');
+    let text = formData.get('text');
 
-    const data = {
+    const params = {
         name,
         email,
         text
     }
 
-    postData('smart.php',data)
-        .then(res => console.log(res));
+    console.log(name);
+
+    const templateId = import.meta.env.VITE_TEMPLATE_ID;
+    const serviceId = import.meta.env.VITE_SERVICE_ID;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+
+    emailjs.send(serviceId, templateId, params, publicKey)
+        .then(res => {
+            console.log(res.status, res.text);
+            resetForm(document.getElementById('name'), document.getElementById('email'), document.getElementById('text'))
+        })
+        .catch(e => {
+            console.log(e);
+        })
 }

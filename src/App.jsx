@@ -10,7 +10,7 @@ import AboutMe from './components/AboutMe/AboutMe';
 import Contact from './components/Contact/Contact';
 import Projects from './components/Projects/Projects'
 
-function App() {
+function App() {;
 
   const [className, setClassName] = useState('app');
 
