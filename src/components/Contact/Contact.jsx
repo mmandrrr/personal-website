@@ -1,7 +1,6 @@
 import { useEffect } from "react";
+import Form from "./Form/Form";
 
-import linkedin from '../../assets/social-icons/linedin.svg';
-import telegram from '../../assets/social-icons/telegram.svg'
 
 const Contact = ({changeLoaded}) => {
 
@@ -43,22 +42,7 @@ const Contact = ({changeLoaded}) => {
                             </a>
                         </div>
                     </div>
-                    <form className="contact__form">
-                        <h3>By e-mail</h3>
-                        <label htmlFor="name">
-                            Your Name
-                            <input type="text" name="name" className="contact_name"/>
-                        </label>
-                        <label htmlFor="email">
-                            Your Email
-                            <input type="email" name="email" className="contact_email" />
-                        </label>
-                        <label htmlFor="text">
-                            Your Message
-                            <textarea name="text" cols="30" rows="10"></textarea>
-                        </label>
-                        <input type="button" value="Send Letter" className="contact_btn"/>
-                    </form>
+                    <Form />
                 </div>
             </div>
         </section>

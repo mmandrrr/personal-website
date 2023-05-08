@@ -7,13 +7,13 @@ export const edData = [
         icon : courses,
         title : 'Udemy',
         subtitle : 'Web-Development (2021-♾️)',
-        description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas suscipit molestiae repellat possimus fuga minus architecto tempora, vitae excepturi id.'
+        description : 'I took courses on the basic technologies needed to create advanced web applications(HTML ,CSS, JS, ReactJS, Redux).'
     },
     {
         id : 'university',
         icon : university,
         title : 'IFNTUOG',
         subtitle : 'Geology of Oil and Gas (2015-2020)',
-        description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas suscipit molestiae repellat possimus fuga minus architecto tempora, vitae excepturi id.'
+        description : "I received a master's degree majoring in Geology of Oil and Gas."
     },
 ]

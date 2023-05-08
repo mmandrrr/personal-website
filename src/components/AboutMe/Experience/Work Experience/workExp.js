@@ -7,13 +7,13 @@ export const workExp = [
         icon : marketing,
         title : 'InfuseMedia',
         subtitle : 'Verification Specialist (2020-2023)',
-        description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas suscipit molestiae repellat possimus fuga minus architecto tempora, vitae excepturi id.'
+        description : 'My main responsibilities were checking various information and finding it on the internet, which greatly improved my ability to find everything I needed on my own.'
     },
     {
         id : 'letter',
         icon : letter,
         title : 'NovaPoshta',
         subtitle : 'Post Operator (2018-2019)',
-        description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas suscipit molestiae repellat possimus fuga minus architecto tempora, vitae excepturi id.'
+        description : 'I worked in a small branch, so my duties included literally everything: from receiving parcels from customers and logistics between the branch and the warehouse to working with financial reports and encashment.'
     },
 ]
