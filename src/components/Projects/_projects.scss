@@ -93,13 +93,21 @@
         background-color: rgba(0, 0, 0, 0.3);
     }
 
-    &__item-link {
-        opacity: 0;
-        transition: opacity 0.3s ease;
+    &__link-container {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: column;
+        gap: .625rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item-link {
+        opacity: 0;
+        transition: opacity 0.3s ease;
 
         path {
             transition: all 0.5s ease;

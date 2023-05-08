@@ -22,6 +22,7 @@ body {
 @import '../components/AboutMe/_about.scss';
 @import '../components/Projects/projects';
 @import '../components/Contact/_contact.scss';
+@import './scrollbar';
 
 a:hover {
     cursor: url(../assets/cursor/pointer.svg), auto;

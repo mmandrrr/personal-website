@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import ProjectItem from "./ProjectItem/ProjectItem";
 
-import { projectImg } from "./projectsImgData";
+import { projects } from "./projectsData";
 
 
 const Projects = ({changeLoaded}) => {
@@ -11,13 +11,15 @@ const Projects = ({changeLoaded}) => {
         changeLoaded('app loaded-projects')
     },[])
 
-    const projectList = projectImg.map(({image,idName,link},i) => {
+    const projectList = projects.map(({image, idName, link, hosted, hosting}, i) => {
         return(
             <ProjectItem
                 image = {image}
                 idName = {idName}
                 link = {link}
-                key={i}
+                key = {i}
+                hosted = {hosted}
+                hosting={hosting}
              />
         )
     })
