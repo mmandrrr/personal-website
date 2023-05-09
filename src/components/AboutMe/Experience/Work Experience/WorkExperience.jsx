@@ -1,5 +1,4 @@
-
-import { workExp } from './workExp'
+import { workExp } from './workExp';
 
 const WorkExperience = () => {
 

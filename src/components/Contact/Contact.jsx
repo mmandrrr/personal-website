@@ -1,11 +1,12 @@
 import { useEffect } from "react";
+
 import Form from "./Form/Form";
 
 
 const Contact = ({changeLoaded}) => {
 
     useEffect(() => {
-        changeLoaded('app loaded-contact')
+        changeLoaded('app loaded-contact');
     },[])
 
     return(

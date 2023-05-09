@@ -7,7 +7,7 @@ import Design from "./Design/Design";
 const Main = ({changeLoaded}) => {
 
     useEffect(() => {
-        changeLoaded('app loaded')
+        changeLoaded('app loaded');
     },[])
 
     return (

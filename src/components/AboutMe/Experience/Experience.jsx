@@ -8,14 +8,14 @@ const Experience = () => {
     let threshold;
 
     if(innerWidth <= 426) {
-        threshold = 0.15
+        threshold = 0.15;
     } else if(innerWidth <= 768) {
-        threshold = 0.4
+        threshold = 0.4;
     } else {
-        threshold = 0.7
+        threshold = 0.7;
     }
 
-    intersectionObs(threshold, '.exp')
+    intersectionObs(threshold, '.exp');
 
     return(
         <div className="exp">

@@ -8,7 +8,7 @@ const Mobile = () => {
           [burger, setBurger] = useState('open');
 
     const showMobileMenu = () => {
-        setClassName('mobile mobile_open');
+        setClassName('mobile mobile__open');
         setBurger('close');
     }
 
@@ -28,16 +28,16 @@ const Mobile = () => {
     return(
         <>
         <section className={className}>
-            <nav className='mobile_menu'>
-                <ul className="mobile_list">
-                    <li className="mobile_item"><Link onClick={hideMobileMenu} to="/" className="mobile_link">Home <span></span></Link></li>
-                    <li className="mobile_item"><Link onClick={hideMobileMenu} to="about" className="mobile_link">About me <span></span></Link></li>
-                    <li className="mobile_item"><Link onClick={hideMobileMenu} to="projects" className="mobile_link">Projects <span></span></Link></li>
-                    <li className="mobile_item"><Link onClick={hideMobileMenu} to="contact" className="mobile_link">Contact me <span></span></Link></li>
+            <nav className='mobile__menu'>
+                <ul className="mobile__list">
+                    <li className="mobile__item"><Link onClick={hideMobileMenu} to="/" className="mobile__link">Home <span></span></Link></li>
+                    <li className="mobile__item"><Link onClick={hideMobileMenu} to="about" className="mobile__link">About me <span></span></Link></li>
+                    <li className="mobile__item"><Link onClick={hideMobileMenu} to="projects" className="mobile__link">Projects <span></span></Link></li>
+                    <li className="mobile__item"><Link onClick={hideMobileMenu} to="contact" className="mobile__link">Contact me <span></span></Link></li>
                 </ul>
             </nav>
         </section>
-        <div onClick={toggleMobileMenu} className={`mobile_popup ${burger}`}><span></span></div>
+        <div onClick={toggleMobileMenu} className={`mobile__popup ${burger}`}><span></span></div>
         </>
     )
 }

@@ -1,8 +1,8 @@
+import { formSubmit } from "../../../services/formSubmit";
 
-import { formSubmit } from "../../../services/formSubmit"
-import Loader from "./Status/Loader"
-import Success from "./Status/Success"
-import ErrorMessage from "./Status/ErrorMessage"
+import Loader from "./Status/Loader";
+import Success from "./Status/Success";
+import ErrorMessage from "./Status/ErrorMessage";
 
 const Form = () => {
 

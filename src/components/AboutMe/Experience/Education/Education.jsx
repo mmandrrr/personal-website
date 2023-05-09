@@ -1,9 +1,7 @@
-
-import { edData } from "./educationData"
+import { edData } from "./educationData";
 
 const Education = () => {
-
-    
+        
     const edList = edData.map(({id,icon, title, subtitle, description},i) => {
         return(
             <li key={i}>

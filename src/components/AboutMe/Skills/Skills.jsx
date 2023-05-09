@@ -1,4 +1,5 @@
 import SkillItem from "./SkillItem/SkillItem";
+
 import { skillList } from "./skillsList";
 import { intersectionObs } from "../../../services/intersectionObs";
 

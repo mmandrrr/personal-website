@@ -1,4 +1,4 @@
-import intro from '../../../assets/Bitmoji/greeting.webp'
+import intro from '../../../assets/Bitmoji/greeting.webp';
 
 const Introduction = () => {
     return(

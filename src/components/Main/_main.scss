@@ -71,7 +71,7 @@
     color: $purple;
     will-change: transform;
 
-    &_content {
+    &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -81,13 +81,13 @@
         margin: 0 auto;
     }
 
-    &_title {
+    &__title {
         font-size: calc(18px + (45 - 18) * ((100vw - 320px)/(1920 - 320)));
         opacity: 0;
         font-weight: 700;
     }
 
-    &_description {
+    &__description {
         font-size: 14px;
         max-width: calc(250px + (600 - 250) * ((100vw - 20rem)/(1920 - 320)));
         opacity: 0;
@@ -102,7 +102,7 @@
         }
     }
 
-    &_button {
+    &__button {
         display: flex;
         justify-content: space-between;
         width: 12.5rem;
@@ -161,17 +161,17 @@
 
     .main {
 
-        &_title {
+        &__title {
             transition: opacity 3s ease;
             opacity: 1;
         }
 
-        &_description {
+        &__description {
             transition: opacity 3s ease;
             opacity: 1;
         }
 
-        &_button {
+        &__button {
             transition: opacity 3s ease;
             opacity: 1;
         }
@@ -201,13 +201,13 @@
     }
 
     .main {
-        &_content {
+        &__content {
             justify-content: start;
             align-items: center;
             padding-top: 120px;
         }
 
-        &_description {
+        &__description {
             text-align: center;
         }
     }

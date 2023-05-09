@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import './style/app.css';
-
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Mobile from './components/Header/Mobile/Mobile';
 import AboutMe from './components/AboutMe/AboutMe';
 import Contact from './components/Contact/Contact';
-import Projects from './components/Projects/Projects'
+import Projects from './components/Projects/Projects';
+
+import './style/app.css';
 
 function App() {;
 

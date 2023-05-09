@@ -8,7 +8,7 @@ import { projects } from "./projectsData";
 const Projects = ({changeLoaded}) => {
 
     useEffect(() => {
-        changeLoaded('app loaded-projects')
+        changeLoaded('app loaded-projects');
     },[])
 
     const projectList = projects.map(({image, idName, link, hosted, hosting}, i) => {

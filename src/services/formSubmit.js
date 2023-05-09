@@ -1,21 +1,12 @@
 import emailjs from '@emailjs/browser';
 import { resetForm } from './resetForm';
 
-const classChanger = (target) => {
+const classChanger = (target, className) => {
     target.classList.remove('loading');
-    target.classList.add('sent');
+    target.classList.add(className);
 
     setTimeout(() => {
-        target.classList.remove('sent');
-    },5000)
-}
-
-const throwError = (target) => {
-    target.classList.remove('loading');
-    target.classList.add('errorm');
-
-    setTimeout(() => {
-        target.classList.remove('errorm');
+        target.classList.remove(className);
     },5000)
 }
 
@@ -44,11 +35,11 @@ export const formSubmit = (e) => {
         .then(res => {
             console.log(res.status, res.text);
             resetForm(document.getElementById('name'), document.getElementById('email'), document.getElementById('text'));
-            classChanger(e.target);
+            classChanger(e.target,'sent');
         })
         .catch(error => {
             console.log(error);
-            throwError(e.target);
+            classChanger(e.target, 'errorm');
             resetForm(document.getElementById('name'), document.getElementById('email'), document.getElementById('text'));
         })
 }

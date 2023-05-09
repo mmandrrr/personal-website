@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+
 import Introduction from "./Introduction/Introduction";
 import Experience from "./Experience/Experience";
 import Skills from "./Skills/Skills";
@@ -6,7 +7,7 @@ import Skills from "./Skills/Skills";
 const AboutMe = ({changeLoaded}) => {
 
     useEffect(() => {
-        changeLoaded('app loaded-about')
+        changeLoaded('app loaded-about');
     }, [])
     
 
