@@ -1,14 +1,15 @@
-import jobBoard from '../../assets/projects/JobBoard1-min.webp';
 import todoList from '../../assets/projects/todoList-min.webp';
 import portfolio from '../../assets/projects/portfolio-min.webp';
 import marvelApi from '../../assets/projects/marvelApi-min.webp';
 import vetclinic from '../../assets/projects/vetclinic-min.webp';
+import iceCream from '../../assets/projects/iceCream-min.webp';
+
 
 export const projects = [
     {
-        image: jobBoard,
-        idName: 'job-board',
-        link: 'https://github.com/mmandrrr/AleannLab-job-list',
+        image: iceCream,
+        idName: 'ice-cream',
+        link: 'https://github.com/mmandrrr/ice-cream',
         hosted: false,
         hosting: ''
     },
